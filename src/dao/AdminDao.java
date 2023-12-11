@@ -7,8 +7,6 @@ import model.Admin;
 
 public class AdminDao extends BaseDao
 {
-     
-
 	public Admin selectAdmin(String name,String password,int lid) 
     {
     	String sqlstr="select * from user where name = ? and password = ? and status = ?";
@@ -16,7 +14,6 @@ public class AdminDao extends BaseDao
     	try
     	{
     		this.pSatement=this.con.prepareStatement(sqlstr);
-    		
     		this.pSatement.setString(1, name);
     		this.pSatement.setString(2, password);
     		this.pSatement.setInt(3, lid);
